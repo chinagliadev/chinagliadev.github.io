@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.corpo-pagina{
+    background-color: #0e0e0e;
+}
+
+.header-portifolio {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    
+}
+
+.lista-links {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+    padding: 10px 20px;
+}
+
+.lista-links li {
+    color: white;
+    cursor: pointer;
+    padding: 1px 10px;
+    border-radius: 10px;
+}
+
+.lista-links li:hover {
+    background-color: rgb(46, 46, 46);
+}
+
+.hero {
+    position: relative; 
+    min-height: 70vh;
+    overflow: hidden; 
+}
+
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('../asset/img/img-hero-2.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(13px);          
+    transform: scale(1.1);      
+    z-index: 1;
+}
+
+.apresentacao {
+    position: relative;
+    z-index: 2;
+    max-width: 550px;
+    color: black;
+}
+
+
+
+.titulo-apresentacao{
+    font-size: 60px;
+}
+
+.botoes-apresentacao{
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+    width: 150px;
+    background-color: #171717;
+    border: 1px white solid;
+    color: white;
+    transition: 0.3s;
+}
+
+.botoes-apresentacao:hover{
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+    width: 150px;
+    background-color: white;
+    border: 1px white solid;
+    color: #171717;
+    transition: 0.3s;
+}
+
+.paragrafo-apresentacao{
+    color: rgb(182, 182, 182);
+}
+
+.sessao-tecnologias{
+    min-height: 80vh;
+}
+
+.sessao-projetos{
+    min-height: 80vh;
+}
