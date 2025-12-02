@@ -1,93 +1,120 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; 
 }
 
 .corpo-pagina{
     background-color: #0e0e0e;
 }
 
+
 .header-portifolio {
     display: flex;
-    justify-content: space-between;
-    color: white;
+    justify-content: center;
+    color: white; 
     align-items: center;
-    
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; 
+    padding: 15px 30px; 
 }
 
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white; 
+}
+
+
+.navegacao-portifolio{
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+}
+
+
 .lista-links {
-    display: flex;
-    gap: 30px;
-    list-style-type: none;
-    padding: 10px 20px;
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    gap: 30px; 
 }
 
 .lista-links li {
-    color: white;
+    padding: 10px 15px;
+    color: white; 
+    font-size: 1rem;
     cursor: pointer;
-    padding: 1px 10px;
-    border-radius: 10px;
+    transition: color 0.3s;
 }
 
 .lista-links li:hover {
-    background-color: rgb(46, 46, 46);
+    color: #a0a0a0; 
 }
+
 
 .hero {
     position: relative; 
-    min-height: 70vh;
+    min-height: 100vh;
     overflow: hidden; 
+   
 }
-
 
 .hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('../asset/img/img-hero-2.jpg');
+    background-image: url('../asset/img/img-background.jpg');
     background-size: cover;
     background-position: center;
-    filter: blur(13px);          
-    transform: scale(1.1);      
-    z-index: 1;
+    /* Adicione efeitos de desfoque/zoom se quiser um visual mais dramático */
+    /* filter: blur(3px); 
+    transform: scale(1.02); 
+    z-index: 1; */
 }
 
 .apresentacao {
     position: relative;
     z-index: 2;
     max-width: 550px;
-    color: black;
+    color: white; 
 }
-
-
 
 .titulo-apresentacao{
     font-size: 60px;
-}
-
-.botoes-apresentacao{
-    border: none;
-    padding: 5px;
-    border-radius: 3px;
-    width: 150px;
-    background-color: #171717;
-    border: 1px white solid;
-    color: white;
-    transition: 0.3s;
-}
-
-.botoes-apresentacao:hover{
-    border: none;
-    padding: 5px;
-    border-radius: 3px;
-    width: 150px;
-    background-color: white;
-    border: 1px white solid;
-    color: #171717;
-    transition: 0.3s;
+    color: white; 
 }
 
 .paragrafo-apresentacao{
-    color: rgb(182, 182, 182);
+    color: rgb(220, 220, 220); 
+}
+
+
+.botoes-apresentacao{
+    background-color: transparent; 
+    border: 1px solid white; 
+    color: white;
+    padding: 10px 25px; 
+    border-radius: 50px; 
+    width: auto; 
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 10px; 
+}
+
+.botoes-apresentacao:hover{
+    background-color: rgba(255, 255, 255, 0.1); 
+    border: 1px solid white;
+    color: white;
 }
 
 .sessao-tecnologias{
