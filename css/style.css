@@ -72,25 +72,25 @@
 
 @media (max-width: 600px) {
     .header-portifolio {
-        padding: 8px 15px; 
+        padding: 8px 15px;
     }
 
     .logo {
-        font-size: 1.1rem; 
+        font-size: 1.1rem;
     }
 
     .navegacao-portifolio {
         padding: 0 3px;
-        border-radius: 25px; 
+        border-radius: 25px;
     }
 
     .lista-links {
-        gap: 10px; 
+        gap: 10px;
     }
 
     .lista-links li {
-        padding: 6px 8px; 
-        font-size: 0.8rem; 
+        padding: 6px 8px;
+        font-size: 0.8rem;
     }
 }
 
@@ -137,10 +137,10 @@
 
 @media screen and (max-width: 768px) {
     .titulo-apresentacao {
-        font-size: 48px; 
+        font-size: 48px;
     }
 
-    .paragrafo-apresentacao{
+    .paragrafo-apresentacao {
         font-size: 14px;
         padding: 10px;
     }
@@ -148,9 +148,10 @@
 
 @media screen and (max-width: 480px) {
     .titulo-apresentacao {
-        font-size: 36px; 
+        font-size: 36px;
     }
-    .paragrafo-apresentacao{
+
+    .paragrafo-apresentacao {
         font-size: 10px;
         padding: 10px;
     }
@@ -201,8 +202,8 @@
     gap: 5em;
     padding-right: 1em;
     list-style: none;
-    padding: 20px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .carrossel-tecnologias li img {
@@ -224,7 +225,7 @@
     from {
         translate: 0;
     }
-    
+
     to {
         translate: -100%;
     }
@@ -235,7 +236,7 @@
 
 .sessao-projetos {
     min-height: 80vh;
-  
+
 }
 
 
@@ -244,16 +245,16 @@
     max-width: 400px;
     padding: 7px;
     margin: 0 auto;
-    
+
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
-    
+
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.11);
     border: 1px solid rgba(255, 255, 255, 0.15);
 
-    transition: 
+    transition:
         transform 0.4s ease,
         box-shadow 0.4s ease,
         border 0.4s ease;
@@ -288,9 +289,44 @@
     margin-bottom: 0;
 }
 
+.lista-linguagem-projeto {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
 
+.lista-linguagem-projeto li {
+    position: relative;
+}
 
-.cards .card-footer-botoes>button{
+.lista-linguagem-projeto li img {
+    width: 20px;
+    cursor: pointer;
+}
+
+.lista-linguagem-projeto li::after {
+    content: attr(data-legenda);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease;
+}
+
+.lista-linguagem-projeto li:hover::after {
+    opacity: 1;
+}
+
+.cards .card-footer-botoes>button {
     background-color: white;
     width: 100%;
     border-radius: 18px;
