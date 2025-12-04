@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'inter';
+    src: url('../fonts/Inter-VariableFont_opsz\,wght.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +11,7 @@
 
 .corpo-pagina {
     background-color: #0c0c0c;
+    font-family: 'inter';
 }
 
 
@@ -127,12 +133,14 @@
 
 .titulo-apresentacao {
     width: 100%;
-    font-size: 80px;
+    font-size: 50px;
     color: white;
 }
 
 .paragrafo-apresentacao {
     color: rgb(220, 220, 220);
+    max-width: 550px;
+    width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -185,7 +193,6 @@
     min-height: 90vh;
 }
 
-
 .carrossel-container {
     width: 100%;
     display: flex;
@@ -203,11 +210,11 @@
     padding-right: 1em;
     list-style: none;
     cursor: pointer;
-    margin-top: 10px;
+    padding-top: 1rem;
 }
 
 .carrossel-tecnologias li img {
-    width: 60px;
+    width: 45px;
     filter: grayscale(100%);
     transition: transform 0.3s;
 }
@@ -231,14 +238,18 @@
     }
 }
 
+/* sessao sobre */
+.sessao-sobre{
+    min-height: 80vh;
+}
 
 /* sessao projetos */
 
 .sessao-projetos {
     min-height: 80vh;
-
+    background: #0C0C0C;
+    background: linear-gradient(181deg, rgba(12, 12, 12, 1) 18%, rgba(47, 43, 138, 1) 51%, rgba(12, 12, 12, 1) 89%);
 }
-
 
 .cards {
     width: 100%;
@@ -246,8 +257,9 @@
     padding: 7px;
     margin: 0 auto;
 
-    background: rgba(255, 255, 255, 0.05);
+   background-color: transparent;
     backdrop-filter: blur(20px);
+    background-color: rgba(0, 0, 0, 0.048);
 
     border-radius: 24px;
     overflow: hidden;
@@ -259,6 +271,7 @@
         box-shadow 0.4s ease,
         border 0.4s ease;
     cursor: pointer;
+
 }
 
 .cards:hover {
