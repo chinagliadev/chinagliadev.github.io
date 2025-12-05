@@ -266,17 +266,17 @@
     color: white;
     flex: 1;
     height: 100%;
-     border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.lista-skills{
+.lista-skills {
     list-style: none;
     padding: 0;
 }
 
 /* sessao projetos */
 .sessao-projetos {
-    min-height: 80vh;
+    min-height: 100vh;
     background: url('../asset/img/background-projetos.png') center/cover no-repeat;
 }
 
@@ -327,7 +327,6 @@
 }
 
 .card-body-projeto>p {
-    color: rgb(165, 165, 165);
     margin-bottom: 0;
 }
 
@@ -377,4 +376,12 @@
     outline: none;
     border: none;
     font-weight: bold;
+}
+
+.rodape {
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    background-color: rgba(0, 0, 0, 0.048);
+    min-height: 25vh;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
