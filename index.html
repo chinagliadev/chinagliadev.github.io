@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifolio Chinaglia</title>
+    <script src="./asset/js/app.js" defer></script>
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -15,6 +16,7 @@
 </head>
 
 <body class="corpo-pagina">
+    <div id="fade" class="hide"></div>
     <header class="header-portifolio">
         <div class="navegacao-portifolio px-3">
             <nav>
@@ -174,10 +176,12 @@
             criatividade, técnica e aprendizado contínuo. Cada projeto mostra um pouco da minha evolução como
             desenvolvedor.
         </p>
+
         <div class="container">
             <div class="container mt-5">
                 <div class="row g-4">
 
+                    <!-- CARD 1 -->
                     <div class="col-12 col-sm-6 col-lg-4">
                         <div class="cards card-projeto-1">
                             <img src="./asset/img/Img.png" alt="">
@@ -191,13 +195,16 @@
                                     <li data-legenda="Fomantic UI"><img src="./asset/img/fomatic ui.png" alt=""></li>
                                 </ul>
                                 <h2 class="fs-5">Sistema Leticia Duarte - Web</h2>
-                                <p>Sistema web criado para apoiar a Fundação Letícia Duarte, oferecendo ferramentas
+                                <p>
+                                    Sistema web criado para apoiar a Fundação Letícia Duarte, oferecendo ferramentas
                                     práticas para gestão interna, controle de informações e organização administrativa
                                     eficiente.
                                 </p>
                             </div>
                             <div class="card-footer-botoes">
-                                <button class="btn-ver-mais">Ver mais</button>
+                                <button class="btn-ver-mais" data-modal="modal-fundacao-leticia-duarte">
+                                    Ver mais
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -212,12 +219,14 @@
                                     <li data-legenda="JavaScript"><img src="./asset/img/js.png" alt=""></li>
                                 </ul>
                                 <h2 class="fs-5">Placar de truco para casal</h2>
-                                <p>Placar digital e moderno para partidas de truco entre casais. O app web oferece
-                                    um registro fácil e intuitivo dos pontos, com recurso de modais e avisos de vitorias
-                                    caso um do casal ganhar</p>
+                                <p>
+                                    Placar digital e moderno para partidas de truco entre casais. O app web oferece
+                                    um registro fácil e intuitivo dos pontos, com recurso de modais e avisos de vitórias
+                                    caso um dos jogadores ganhe.
+                                </p>
                             </div>
                             <div class="card-footer-botoes">
-                                <button class="btn-ver-mais">Ver mais</button>
+                                <button class="btn-ver-mais" data-modal="modal-truco">Ver mais</button>
                             </div>
                         </div>
                     </div>
@@ -232,9 +241,10 @@
                                     <li data-legenda="JavaScript"><img src="./asset/img/js.png" alt=""></li>
                                 </ul>
                                 <h2 class="fs-5">CINEBOT</h2>
-                                <p>Aplicação desktop desenvolvida para a Fundação Letícia Duarte, permitindo
-                                    gerenciamento ágil de dados, funcionalidades administrativas essenciais e suporte
-                                    eficiente às operações diárias.
+                                <p>
+                                    Aplicação desktop desenvolvida para a Fundação Letícia Duarte, permitindo
+                                    gerenciamento ágil de dados, com funcionalidades administrativas essenciais e
+                                    suporte eficiente às operações diárias.
                                 </p>
                             </div>
                             <div class="card-footer-botoes">
@@ -242,12 +252,14 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
+
+        <!-- RODAPÉ -->
         <footer class="rodape">
             <div class="container text-center">
-
                 <h3 class="rodape-logo">Chinaglia</h3>
 
                 <p class="rodape-descricao mt-2">
@@ -268,12 +280,144 @@
                 <p class="rodape-copy mt-4">
                     © 2025 Chinaglia — Todos os direitos reservados.
                 </p>
-
             </div>
         </footer>
 
-
     </section>
+
+
+
+
+    <div id="modal-fundacao-leticia-duarte" class="hide text-white">
+        <div class="modal-header">
+            <h2 id="modal-titulo-leticia-duarte" class="titulo-modal text-white">Sistema Leticia Duarte Web</h2>
+            <button class="fechar-modal" data-close>
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+
+        <div class="modal-body">
+            <div id="carrosel-projeto-leticia-duarte" class="carousel slide mb-4">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./asset/img/login-sistema-leticia.png" class="d-block w-100 img-fluid"
+                            alt="carrosel imagem do login do sistema leticia duarte">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./asset/img/img-inicio-sistema-leticia-duarte.png" class="d-block w-100 img-fluid"
+                            alt="carrosel imagem do inicio do sistema leticia duarte">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./asset/img/img-cadastro-leticia.png" class="d-block w-100 img-fluid"
+                            alt="carrosel imagem do inicio do sistema leticia duarte">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./asset/img/formulario-sistema-leticia-duarte.png" class="d-block w-100 img-fluid"
+                            alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carrosel-projeto-leticia-duarte"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carrosel-projeto-leticia-duarte"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+
+            <h3>Objetivo Principal: Digitalização e Gestão Eficiente</h3>
+            <p>O <strong>Sistema Leticia Duarte Web</strong> é uma ferramenta desenvolvida para <strong>otimizar a
+                    gestão de cadastros e informações</strong> dos assistidos da Fundação Leticia Duarte.</p>
+            <p>Ele substitui o processo manual (papel e caneta) por um sistema digital ágil e centralizado, visando a
+                organização e a eficiência administrativa.</p>
+
+            <h4>Principais Benefícios:</h4>
+            <ul>
+                <li><strong>Centralização de Dados:</strong> Todas as informações do aluno e sua família em um único
+                    local seguro.</li>
+                <li><strong>Eficiência Operacional:</strong> Redução do tempo gasto em tarefas de registro e busca
+                    manual.</li>
+                <li><strong>Decisão Baseada em Dados:</strong> Capacidade de gerar relatórios e documentos essenciais
+                    (PDFs).</li>
+            </ul>
+
+            <hr>
+
+            <h3>Jornada do Projeto</h3>
+            <p>Tive conhecimento da situação através do meu docente <strong>Paulo</strong>, do SENAC, que me apresentou
+                o problema da Fundação: <strong>a matrícula dos alunos ainda era feita totalmente à mão</strong>, em
+                folhas impressas.</p>
+            <p>Com essa informação, entrei em contato com a diretora <strong>Alexandra</strong>, que confirmou o cenário
+                e abriu a possibilidade de iniciarmos a transformação digital do processo.</p>
+            <p>Recebi uma <strong>foto real da folha de matrícula</strong> utilizada pela instituição, e isso serviu
+                como base para estruturar toda a experiência do usuário, organizando campos, etapas e necessidades
+                reais.</p>
+            <p>A partir disso, iniciei o trabalho de <strong>UI/UX do sistema</strong>, criando toda a interface no
+                Figma. Após cerca de <strong>1 mês desenvolvendo o protótipo</strong>, apresentei para a diretora, que
+                aprovou totalmente o design — liberando o desenvolvimento oficial.</p>
+            <p>Durante a construção do sistema, utilizei <strong>PHP com PDO</strong> para garantir segurança e
+                escalabilidade nas consultas ao banco, além de <strong>MariaDB</strong> como base de dados pela sua
+                performance e robustez. Na parte visual, optei pelo <strong>Fomantic UI (Semantic)</strong> por oferecer
+                componentes mais modernos e adequados ao fluxo de cadastro necessário pela Fundação.</p>
+            <p>Após semanas de desenvolvimento, testes e melhorias, o projeto foi <strong>entregue com sucesso</strong>
+                à Fundação Leticia Duarte. O sistema passou a ser utilizado oficialmente para as <strong>matrículas dos
+                    alunos de 2026</strong>, substituindo totalmente o processo manual e trazendo mais agilidade,
+                organização e segurança para a instituição.</p>
+
+            <hr>
+
+            <p class="text-center">
+                <a href="https://github.com/chinagliadev/sistema-leticia-duarte-web" target="_blank"
+                    class="botoes-projeto btn-glass" rel="noopener noreferrer">
+                    Ver Código e Proposta Completa
+                </a>
+            </p>
+
+        </div>
+    </div>
+
+    <div id="modal-truco" class="hide text-white">
+        <div class="modal-header">
+            <h2 class="titulo-modal text-white">Placar Truco - Casal</h2>
+            <button class="fechar-modal" data-close>
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+
+        <div class="modal-body">
+            <div class="modal-img-body mb-4">
+                <img src="./asset/img/placar-truco-modal.png" class="img-fluid" alt="">
+            </div>
+            <h3>Objetivo Principal: Placar Digital</h3>
+
+            <p>
+                Eu e minha namorada sempre jogávamos truco, mas não tínhamos um placar prático para anotar os pontos.
+                Chegamos a procurar aplicativos, porém nenhum tinha a nossa cara.
+                Então decidi transformar essa necessidade em uma oportunidade para treinar minhas habilidades:
+                criei um placar digital simples, moderno e feito especialmente para nós.
+            </p>
+
+            <hr>
+
+            <p class="text-center">
+                <a href="https://chinagliadev.github.io/truco-placar-casal/" target="_blank" class="botoes-projeto btn-glass"
+                    rel="noopener noreferrer">
+                    Ver Projeto
+                </a>
+                <a href="https://github.com/chinagliadev/truco-placar-casal" target="_blank" class="botoes-projeto btn-glass"
+                    rel="noopener noreferrer">
+                    Ver Código no GitHub
+                </a>
+            </p>
+        </div>
+    </div>
+
+
+
 </body>
 
 </html>

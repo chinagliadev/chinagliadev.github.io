@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 .corpo-pagina {
     background-color: #0c0c0c;
     font-family: 'inter';
@@ -435,4 +439,154 @@
 .rodape-copy {
     color: rgba(255, 255, 255, 0.45);
     font-size: 0.85rem;
+}
+
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.603);
+    z-index: 5;
+}
+
+#modal-fundacao-leticia-duarte {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    background-color: rgba(31, 31, 31, 0.062);
+    z-index: 3000;
+    width: 1000px;
+    height: 700px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    overflow-y: scroll;
+}
+
+
+#modal-truco {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    background-color: rgba(31, 31, 31, 0.062);
+    z-index: 3000;
+    width: 1000px;
+    height: 700px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    overflow-y: scroll;
+}
+
+#modal-truco::-webkit-scrollbar {
+    width: 0;
+    height: 0; 
+}
+
+#modal-fundacao-leticia-duarte::-webkit-scrollbar {
+    width: 0;
+    height: 0; 
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.modal-body p {
+    margin-bottom: 1rem;
+}
+
+#modal-imagem{
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.modal-imagem-body{
+    width: 100%;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+
+.fechar-modal {
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+}
+
+.titulo-modal{
+    color: black;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.btn-glass {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.06); 
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+  box-shadow: 0 6px 20px rgba(2, 6, 23, 0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+  transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+.btn-glass .icon {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.btn-glass:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.6), inset 0 1px 0 rgba(255,255,255,0.03);
+}
+
+.btn-glass:focus {
+  box-shadow: 0 0 0 4px rgba(100, 150, 255, 0.12), 0 8px 24px rgba(2,6,23,0.6);
+  border-color: rgba(100,150,255,0.6);
+}
+
+.btn-glass:active {
+  transform: translateY(-1px) scale(0.997);
+}
+
+@media (max-width: 576px) {
+  .btn-glass {
+    padding: 0.65rem 1rem;
+    font-size: 0.95rem;
+  }
 }
