@@ -451,6 +451,23 @@ body.no-scroll {
     z-index: 5;
 }
 
+#modal-dragonball-explore{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    background-color: rgba(31, 31, 31, 0.062);
+    z-index: 3000;
+    width: 1000px;
+    height: 700px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    overflow-y: scroll;
+}
+
 #modal-fundacao-leticia-duarte {
     position: fixed;
     left: 50%;
