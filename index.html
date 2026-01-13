@@ -32,7 +32,7 @@
     </header>
 
 
-    <section class="hero p-4 d-flex align-items-center justify-content-center">
+    <section class="hero reveal p-4 d-flex align-items-center justify-content-center">
 
         <div class="bg-hero w-100 d-flex align-items-center justify-content-center">
 
@@ -43,7 +43,7 @@
                     do front-end intuitivo ao back-end eficiente
                 </p>
                 <div class="botoes-redes-sociais">
-                    <a href="https://www.linkedin.com/in/victor-chinaglia-339874284/"
+                    <a target="_blank" href="https://www.linkedin.com/in/victor-chinaglia-339874284/"
                         class="botoes-linkedin botoes-apresentacao"><i class="bi bi-linkedin"></i></a>
                     <a href="https://github.com/chinagliadev" target="_blank"
                         class="botoes-instagram botoes-apresentacao"><i class="bi bi-github"></i></a>
@@ -109,7 +109,7 @@
     </div>
 
 
-    <section class="sessao-sobre">
+    <section class="sessao-sobre reveal">
         <h2 class="mt-3 text-center fs-1 fw-bold text-white mb-5 ">SOBRE MIM</h2>
         <div class="container">
             <div class="row g-4">
@@ -170,7 +170,7 @@
         </div>
     </section>
 
-    <section class="sessao-projetos mt-5">
+    <section class="sessao-projetos reveal mt-5">
         <h2 class="mt-4 text-center fs-1 fw-bold text-white">PROJETOS</h2>
         <p class="text-center text-white-50 mt-2 fs-6 w-100" style="max-width: 700px; margin: 0 auto;">
             Aqui você encontra alguns dos projetos que desenvolvi, reunindo
@@ -315,12 +315,17 @@
                 <i class="bi bi-x-lg"></i>
             </button>
         </div>
-
         <div class="modal-body">
             <div class="modal-img-body mb-4">
-                <img src="./asset/img/background-hero-dragonball.jpg" class="img-fluid"
-                    alt="Imagem do projeto Dragon Ball Explore">
+                <div class="ratio ratio-16x9">
+                    <iframe id="dragonBallApi" src="https://www.youtube.com/embed/TJADcKyKVMk"
+                        title="Dragon Ball API - Demonstração"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
             </div>
+
 
             <h3>Objetivo Principal: Explorar a API</h3>
 
@@ -492,12 +497,14 @@
 
         <div class="modal-body">
             <div class="modal-img-body mb-4">
-                <video class="img-fluid" controls>
-                    <source src="./asset/video/studio-belle-demo.mp4" type="video/mp4">
-                    Seu navegador não suporta vídeo.
-                </video>
+                <div class="ratio ratio-16x9">
+                    <iframe id="studioBelleVideo" src="https://www.youtube.com/embed/cshA86x3E2U"
+                        title="Studio Belle - Demonstração"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
             </div>
-            
             <h3>Objetivo Principal: Gestão inteligente de agendamentos</h3>
             <p>
                 Transformando a gestão de salões com tecnologia, o <strong>Studio Belle</strong> nasceu da necessidade
