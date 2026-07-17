@@ -741,8 +741,7 @@ body.no-scroll {
 }
 
 .sessao-experiencia {
-    min-height: 100vh;
-    background: url('../asset/img/background-expreriencia.png') center/cover no-repeat;
+    min-height: 50vh;
 }
 
 .card-experiencia {
@@ -750,13 +749,16 @@ body.no-scroll {
     border-radius: 16px;
     min-height: 200px;
     max-width: 700px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
 
     transition:
         transform 0.4s ease,
         box-shadow 0.4s ease,
         border 0.4s ease;
     cursor: pointer;
-
 }
 
 .card-experiencia:hover {
@@ -778,6 +780,239 @@ body.no-scroll {
     border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.mt-32{
+.mt-32 {
     margin-top: 100px;
+}
+
+.sessao-github {
+    min-height: 80vh;
+    padding: 60px 0;
+}
+
+.sessao-github .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.sessao-github.col-lg-6,
+.sessao-github .col-12 {
+    display: flex;
+}
+
+.sessao-github .conteudo-sobre,
+.sessao-github.conteudo-habilidades,
+.sessao-github .conteudo-academico {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 16px;
+    padding: 8px;
+    color: white;
+    flex: 1;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+.stats-gituhb {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.card-stats {
+    width: 100%;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.body-card {
+    width: 100%;
+    height: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex: 1;
+}
+
+.body-card canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.conteudo-sobre .img-banner-github{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 324px;
+    border-radius: 8px;
+}
+
+.conteudo-sobre .img-banner-project{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.perfil-github-header {
+    position: relative;
+    width: 100%;
+}
+
+.img-banner-github {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.foto-perfil-github {
+    position: absolute;
+    left: 20px;
+    bottom: -35px; 
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #0c0c0c; 
+    background-color: #0c0c0c;
+}
+
+.stats-name {
+    margin-top: 45px;
+    padding-left: 20px;
+}
+
+.stats-name h2 {
+    color: white;
+    margin: 0;
+}
+
+.stats-name h3 {
+    margin: 0;
+}
+
+.conteudo-github-perfil{
+    width: 100%;
+}
+
+.top-repos-card {
+    width: 100%;
+}
+
+.lista-top-repos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-top-repo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-decoration: none;
+    color: white;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.item-top-repo:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.item-top-repo-nome {
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 65%;
+}
+
+.item-top-repo-estrelas {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    flex-shrink: 0;
+}
+
+.item-top-repo-estrelas i {
+    color: #fff0c7;
+}
+
+.foto-perfil-stats {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.lista-itens-stats{
+    display: flex;
+}
+
+.item-stats{
+    width: 100%;
+}
+
+.item-stats h2{
+    font-size: 14px;
+}
+
+#name_github{
+    margin :0;
+}
+
+.button-gitub {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 6px 24px 6px 6px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 15px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-top: 12px;
+}
+
+.button-gitub:hover {
+    background-color: #333;
+}
+
+.button-gitub .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    border-radius: 50%;
+    flex-shrink: 0;
+    color: #1a1a1a;
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.button-gitub:hover .icon {
+    transform: translate(3px, -3px);
 }

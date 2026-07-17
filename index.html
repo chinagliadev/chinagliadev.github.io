@@ -45,8 +45,6 @@
                 <div class="botoes-redes-sociais">
                     <a target="_blank" href="https://www.linkedin.com/in/victor-chinaglia/"
                         class="botoes-linkedin botoes-apresentacao"><i class="bi bi-linkedin"></i></a>
-                    <a href="https://github.com/chinagliadev" target="_blank"
-                        class="botoes-instagram botoes-apresentacao"><i class="bi bi-github"></i></a>
                 </div>
             </div>
 
@@ -179,35 +177,141 @@
         </p>
 
         <div class="container mt-5 d-flex justify-content-center">
-            <div class="card-experiencia text-white background-glassmorphism">
+            <div class="row g-4">
 
-                <div class="cabecalho-card d-flex gap-3">
-                    <img style="border-radius: 8px;" width="100px" src="./asset/img/fundacao-leticia-duarte-logo.png"
-                        alt="">
-
-                    <div class="informacoes-card ">
-                        <h3 class="fs-5 fw-bold">Freelancer | 2025 - 2026</h3>
-                        <h4 class="fs-6 text-white-50">Fundação Leticia Duarte</h4>
+                <div class="col-12 col-sm-6">
+                    <div class="card-experiencia text-white background-glassmorphism">
+                        <div class="cabecalho-card d-flex gap-3">
+                            <div class="informacoes-card">
+                                <h3 class="fs-5 fw-bold">Freelancer | 2025 - 2026</h3>
+                                <h4 class="fs-6 text-white-50">Fundação Leticia Duarte - Americana SP</h4>
+                            </div>
+                        </div>
+                        <p class="mt-3">
+                            Desenvolvimento Full Stack de um sistema web de gestão de matrículas, com back-end em PHP,
+                            banco de dados relacional e front-end responsivo em Bootstrap e Fomantic UI. Geração
+                            automática de documentos em PDF e validações dinâmicas com JavaScript e jQuery.
+                        </p>
                     </div>
                 </div>
 
-                <p class="mt-3">
-                    Desenvolvimento Full Stack de um sistema web para gestão, cadastro e controle de matrículas
-                    de alunos e responsáveis,
-                    com geração automática de documentos em PDF, eliminando a necessidade de processos manuais
-                    por parte da escola.
-                    Arquitetura de back-end em PHP, com modelagem e estruturação de banco de dados.
-                    Criação de interfaces modernas e responsivas utilizando Bootstrap e Fomantic UI, com foco em
-                    acessibilidade móvel.
-                    Implementação de comportamentos dinâmicos e validações de formulários com JavaScript e
-                    jQuery.
-                </p>
+                <div class="col-12 col-sm-6">
+                    <div class="card-experiencia text-white background-glassmorphism">
+                        <div class="cabecalho-card d-flex gap-3">
+                            <div class="informacoes-card">
+                                <h3 class="fs-5 fw-bold">Desenvolvedor Júnior Full Stack | 2025 - Atual</h3>
+                                <h4 class="fs-6 text-white-50">Delta Soluções Inteligentes</h4>
+                            </div>
+                        </div>
+                        <p class="mt-3">
+                            Desenvolvimento Full Stack em um sistema ERP, atuando em múltiplos módulos com Java e
+                            JavaScript.
+                            Correção de bugs críticos relacionados a cálculos financeiros e integrações de dados.
+                            Implementação de novas funcionalidades e regras de negócio, incluindo controles de permissão
+                            e adequações a mudanças regulatórias.
+                        </p>
+                    </div>
+                </div>
 
             </div>
         </div>
     </section>
 
+    <section class="sessao-github reveal">
+        <h2 class="mt-3 text-center fs-1 fw-bold text-white mb-2">GITHUB</h2>
+        <p class="text-center text-white-50 mt-2 fs-6 w-100 mb-4" style="max-width: 700px; margin: 0 auto;">
+            Confira algumas estatísticas do meu GitHub, como estrelas, seguidores e repositórios,
+            refletindo um pouco da minha jornada como desenvolvedor.
+        </p>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="conteudo-sobre">
 
+                        <div class="stats-gituhb">
+                            <img src="./asset/img/banner.jpg" alt="" class="img-banner-github">
+                        </div>
+
+                        <div class="stats-gituhb mt-2">
+                            <div class="stats-gituhb">
+                                <div
+                                    class="card-stats background-glassmorphism d-flex justify-content-between flex-column">
+                                    <header class="header-card">
+                                        <h2 id="name_github" class="fs-5"></h2>
+                                        <h3 class="fs-6 text-secondary" id="username_github"></h3>
+                                    </header>
+
+                                    <div class="lista-itens-stats">
+                                        <div class="item-stats ">
+                                            <span class="fs-6"><i class="bi bi-star-fill"></i> <span
+                                                    id="total_estrelas">0</span></span>
+                                            <h2 class="mt-1">Estrelas</h2>
+                                        </div>
+                                        <div class="item-stats">
+                                            <span class="fs-6"><i class="bi bi-person-fill"></i> <span
+                                                    id="total_seguidores">0</span></span>
+                                            <h2 class="mt-1">Seguidores</h2>
+                                        </div>
+                                        <div class="item-stats">
+                                            <span class="fs-6"><i class="bi bi-file-earmark-code"></i> <span
+                                                    id="total_repositorios">0</span></span>
+                                            <h2 class="mt-1">Repositórios</h2>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-stats background-glassmorphism">
+                                    <img src="./asset/img/git-projects.jpg" alt="" class="img-banner-project">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="conteudo-sobre">
+                        <div class="stats-gituhb">
+
+                            <div class="card-stats background-glassmorphism ">
+                                <img src="" id="foto-github-stats" alt="" class="foto-perfil-stats">
+                                <a href="https://github.com/chinagliadev" class="button-gitub" target="_blank">
+                                    <div class="icon">
+                                        <i class="bi bi-arrow-up-right"></i>
+                                    </div>
+                                    <div class="w-100 text-center"><span>Git Hub</span></div>
+                                </a>
+                            </div>
+
+                            <div class="card-stats background-glassmorphism ">
+
+                                <header class="header-card">
+                                    <h3 class="fs-6">Lingugens mais utlizada</h3>
+
+                                    <div class="body-card">
+                                        <canvas id="github-grafico"></canvas>
+                                    </div>
+
+                                </header>
+
+                            </div>
+
+                        </div>
+
+                        <div class="stats-gituhb mt-2">
+                            <div class="card-stats background-glassmorphism top-repos-card">
+                                <h3 class="fs-6 mb-3">Top Repositórios</h3>
+                                <ul id="lista-top-repos" class="lista-top-repos"></ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="sessao-projetos reveal mt-5">
         <h2 class="mt-4 text-center fs-1 fw-bold text-white">PROJETOS</h2>
@@ -727,7 +831,7 @@
         <div class="modal-body">
 
             <div class="modal-img-body mb-4">
-               <img width="100%" src="./asset/img/studio-belle.png" alt="">
+                <img width="100%" src="./asset/img/studio-belle.png" alt="">
             </div>
 
             <h3>Objetivo Principal: Gestão inteligente de agendamentos</h3>
@@ -762,8 +866,8 @@
                     class="botoes-projeto btn-glass" rel="noopener noreferrer">
                     Ver Código no GitHub
                 </a>
-                <a href="https://www.linkedin.com/posts/victor-chinaglia_desenvolvimentoweb-fullstack-php-activity-7414374641005133824-5zg9?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEUu890BEctVzQXd_I4FxB9flrzpaalF3Ac" target="_blank"
-                    class="botoes-projeto btn-glass" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/posts/victor-chinaglia_desenvolvimentoweb-fullstack-php-activity-7414374641005133824-5zg9?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEUu890BEctVzQXd_I4FxB9flrzpaalF3Ac"
+                    target="_blank" class="botoes-projeto btn-glass" rel="noopener noreferrer">
                     Ver Projeto
                 </a>
             </p>
@@ -779,7 +883,7 @@
         </div>
         <div class="modal-body">
             <div class="modal-img-body mb-4">
-               <img width="100%" src="./asset/img/apresentacaoa-weather.png" alt="">
+                <img width="100%" src="./asset/img/apresentacaoa-weather.png" alt="">
             </div>
 
             <h3>Objetivo Principal: Explorar a API OpenWeather</h3>
@@ -815,6 +919,7 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
 
 </body>
 
