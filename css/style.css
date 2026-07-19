@@ -753,23 +753,6 @@ body.no-scroll {
 
     display: flex;
     flex-direction: column;
-
-    transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease,
-        border 0.4s ease;
-    cursor: pointer;
-}
-
-.card-experiencia:hover {
-    transform: scale(1.03) translateY(-4px);
-    border-color: rgba(255, 255, 255, 0.35);
-
-    box-shadow:
-        0 0 25px rgba(255, 255, 255, 0.12),
-        inset 0 0 18px rgba(255, 255, 255, 0.05);
-
-
 }
 
 .background-glassmorphism {
@@ -845,7 +828,7 @@ body.no-scroll {
     height: 100% !important;
 }
 
-.conteudo-sobre .img-banner-github{
+.conteudo-sobre .img-banner-github {
     object-fit: cover;
     object-position: center;
     width: 100%;
@@ -853,7 +836,7 @@ body.no-scroll {
     border-radius: 8px;
 }
 
-.conteudo-sobre .img-banner-project{
+.conteudo-sobre .img-banner-project {
     object-fit: cover;
     object-position: center;
     width: 100%;
@@ -876,12 +859,12 @@ body.no-scroll {
 .foto-perfil-github {
     position: absolute;
     left: 20px;
-    bottom: -35px; 
+    bottom: -35px;
     width: 90px;
     height: 90px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #0c0c0c; 
+    border: 4px solid #0c0c0c;
     background-color: #0c0c0c;
 }
 
@@ -899,7 +882,7 @@ body.no-scroll {
     margin: 0;
 }
 
-.conteudo-github-perfil{
+.conteudo-github-perfil {
     width: 100%;
 }
 
@@ -963,20 +946,20 @@ body.no-scroll {
     border-radius: 12px;
 }
 
-.lista-itens-stats{
+.lista-itens-stats {
     display: flex;
 }
 
-.item-stats{
+.item-stats {
     width: 100%;
 }
 
-.item-stats h2{
+.item-stats h2 {
     font-size: 14px;
 }
 
-#name_github{
-    margin :0;
+#name_github {
+    margin: 0;
 }
 
 .button-gitub {
@@ -1015,4 +998,19 @@ body.no-scroll {
 
 .button-gitub:hover .icon {
     transform: translate(3px, -3px);
+}
+
+.container-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden; 
+}
+
+.container-img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
 }
