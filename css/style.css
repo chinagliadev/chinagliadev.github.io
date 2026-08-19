@@ -121,7 +121,7 @@ body.no-scroll {
     content: "";
     position: absolute;
     inset: 0;
-    background: url('../asset/img/Design\ sem\ nome\ \(13\).png') no-repeat center/cover;
+    background: url('../asset/img/background-home.jpg') no-repeat center/cover;
     filter: blur(4px);
     transform: scale(1.1);
     z-index: 0;
@@ -243,7 +243,7 @@ body.no-scroll {
 }
 
 .sessao-sobre {
-    min-height: 80vh;
+    min-height: 100vh;
     background: url('../asset/img/background-sobre.png') center/cover no-repeat;
     padding: 60px 0;
 }
@@ -262,7 +262,10 @@ body.no-scroll {
 .sessao-sobre .conteudo-sobre,
 .sessao-sobre .conteudo-habilidades,
 .sessao-sobre .conteudo-academico {
-    background: rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background: rgba(8, 8, 8, 0.72);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-radius: 16px;
@@ -270,7 +273,81 @@ body.no-scroll {
     color: white;
     flex: 1;
     height: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.04),
+        0 15px 40px rgba(0, 0, 0, 0.35);
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.sessao-sobre .conteudo-sobre::before,
+.sessao-sobre .conteudo-habilidades::before,
+.sessao-sobre .conteudo-academico::before {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    filter: blur(55px);
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.sessao-sobre .conteudo-sobre::before {
+    left: 8%;
+    bottom: -75px;
+    background: radial-gradient(
+        circle,
+        rgba(45, 70, 255, 0.95) 0%,
+        rgba(170, 0, 255, 0.65) 42%,
+        transparent 72%
+    );
+}
+
+.sessao-sobre .conteudo-habilidades::before {
+    right: 6%;
+    bottom: -70px;
+    background: radial-gradient(
+        circle,
+        rgba(0, 255, 90, 0.95) 0%,
+        rgba(160, 255, 0, 0.6) 42%,
+        transparent 72%
+    );
+}
+
+.sessao-sobre .conteudo-academico::before {
+    right: 8%;
+    bottom: -75px;
+    background: radial-gradient(
+        circle,
+        rgba(255, 80, 0, 0.95) 0%,
+        rgba(255, 190, 0, 0.65) 42%,
+        transparent 72%
+    );
+}
+
+.sessao-sobre .conteudo-sobre:hover,
+.sessao-sobre .conteudo-habilidades:hover,
+.sessao-sobre .conteudo-academico:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.24);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.07),
+        0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.sessao-sobre .conteudo-sobre h2,
+.sessao-sobre .conteudo-habilidades h2,
+.sessao-sobre .conteudo-academico h3,
+.sessao-sobre .conteudo-sobre p,
+.sessao-sobre .conteudo-habilidades ul,
+.sessao-sobre .conteudo-academico ul {
+    position: relative;
+    z-index: 1;
 }
 
 .lista-skills {
@@ -745,22 +822,223 @@ body.no-scroll {
 }
 
 .card-experiencia {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
     padding: 24px;
-    border-radius: 16px;
-    min-height: 200px;
+    border-radius: 28px;
+    min-height: 320px;
     max-width: 700px;
     height: 100%;
 
     display: flex;
     flex-direction: column;
+
+    background: rgba(12, 13, 28, 0.48);
+
+    backdrop-filter: blur(30px) saturate(150%);
+    -webkit-backdrop-filter: blur(30px) saturate(150%);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.12),
+        inset 0 -1px 1px rgba(255, 255, 255, 0.03),
+        0 25px 70px rgba(0, 0, 0, 0.75),
+        0 10px 30px rgba(0, 0, 0, 0.45);
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.card-experiencia::before {
+    content: "";
+
+    position: absolute;
+    z-index: -2;
+
+    width: 430px;
+    height: 300px;
+
+    left: 50%;
+    bottom: -190px;
+
+    transform: translateX(-50%);
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(225, 105, 255, 1) 0%,
+            rgba(178, 60, 255, 0.95) 22%,
+            rgba(105, 55, 255, 0.85) 45%,
+            rgba(45, 70, 255, 0.55) 62%,
+            transparent 78%
+        );
+
+    filter: blur(45px);
+
+    opacity: 1;
+
+    pointer-events: none;
+}
+
+.card-experiencia::after {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.10) 0%,
+            rgba(255, 255, 255, 0.025) 25%,
+            transparent 45%,
+            transparent 100%
+        );
+
+    pointer-events: none;
+}
+
+.card-experiencia header,
+.card-experiencia .cabecalho-card,
+.card-experiencia hr,
+.card-experiencia > p {
+    position: relative;
+    z-index: 2;
+}
+
+.card-experiencia hr {
+    border-color: rgba(255, 255, 255, 0.12);
+    opacity: 1;
+}
+
+.card-experiencia > p {
+    color: rgba(255, 255, 255, 0.72);
+    line-height: 1.65;
+}
+
+.card-experiencia .informacoes-card h3 {
+    color: #fff;
+}
+
+.card-experiencia .informacoes-card h4 {
+    color: rgba(255, 255, 255, 0.45) !important;
+}
+
+.card-experiencia:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(255, 255, 255, 0.28);
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.15),
+        0 30px 80px rgba(0, 0, 0, 0.85),
+        0 15px 40px rgba(0, 0, 0, 0.55),
+        0 0 45px rgba(145, 55, 255, 0.15);
 }
 
 .background-glassmorphism {
-    background: rgba(255, 255, 255, 0.05);
+    background:
+        linear-gradient(
+            180deg,
+            rgba(10, 12, 24, 0.94) 0%,
+            rgba(10, 10, 20, 0.88) 58%,
+            rgba(20, 12, 36, 0.94) 100%
+        );
+
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.card-experiencia header,
+.card-experiencia .cabecalho-card,
+.card-experiencia hr,
+.card-experiencia > p {
+    position: relative;
+    z-index: 1;
+}
+
+.card-experiencia header {
+    min-height: 32px;
+}
+
+.card-experiencia hr {
+    border-color: rgba(255, 255, 255, 0.12);
+    opacity: 1;
+}
+
+.card-experiencia > p {
+    color: rgba(255, 255, 255, 0.72);
+    line-height: 1.65;
+}
+
+.card-experiencia .informacoes-card h3 {
+    color: #ffffff;
+}
+
+.card-experiencia .informacoes-card h4 {
+    color: rgba(255, 255, 255, 0.45) !important;
+}
+
+.card-experiencia .lista-linguagem-projeto {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 0;
+}
+
+.card-experiencia .lista-linguagem-projeto li img {
+    opacity: 0.85;
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.card-experiencia .lista-linguagem-projeto li:hover img {
+    opacity: 1;
+    transform: translateY(-2px) scale(1.12);
+}
+
+@media (max-width: 768px) {
+    .card-experiencia {
+        min-height: 300px;
+        border-radius: 24px;
+        padding: 20px;
+    }
+
+    .card-experiencia::before {
+        width: 240px;
+        height: 170px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-experiencia {
+        min-height: 280px;
+        border-radius: 22px;
+        padding: 16px;
+    }
+
+    .card-experiencia::before {
+        width: 210px;
+        height: 150px;
+        bottom: -100px;
+        filter: blur(25px);
+    }
+
+    .card-experiencia > p {
+        font-size: 0.82rem;
+        line-height: 1.55;
+    }
 }
 
 .mt-32 {
@@ -1013,4 +1291,445 @@ body.no-scroll {
     object-fit: contain;
     object-position: center;
     display: block;
+}
+
+@media (max-width: 768px) {
+    .sessao-github {
+        padding: 30px 0;
+    }
+
+    .stats-gituhb {
+        flex-direction: column;
+    }
+
+    .lista-itens-stats {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .conteudo-sobre .img-banner-github {
+        height: 200px;
+    }
+
+    .foto-perfil-stats {
+        height: 200px;
+    }
+
+    .body-card {
+        height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-name h2 {
+        font-size: 1rem;
+    }
+
+    .item-top-repo-nome {
+        max-width: 55%;
+        font-size: 0.8rem;
+    }
+
+    .card-stats {
+        padding: 10px;
+    }
+}
+
+/* =========================================================
+   RESPONSIVIDADE EXTRA
+   Mantém o design original e adapta somente os tamanhos
+   ========================================================= */
+
+@media (max-width: 992px) {
+    .header-portifolio { padding: 12px 15px; }
+    .lista-links { gap: 10px; }
+    .lista-links li { padding: 8px 10px; font-size: 0.9rem; }
+    .hero, .bg-hero { min-height: 65vh; }
+    .apresentacao { width: 90%; }
+    .titulo-apresentacao { font-size: 44px; }
+    .sessao-sobre { padding: 50px 15px; }
+    .sessao-github { padding: 50px 15px; }
+
+    #modal-dragonball-explore,
+    #modal-fundacao-leticia-duarte,
+    #modal-truco,
+    #modal-studio-belle,
+    #modal-weahter {
+        width: 90%;
+        max-width: 900px;
+        height: 85vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-portifolio { padding: 8px 10px; }
+
+    .navegacao-portifolio {
+        width: auto;
+        max-width: 100%;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .navegacao-portifolio::-webkit-scrollbar { display: none; }
+
+    .lista-links {
+        gap: 4px;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+
+    .lista-links li {
+        padding: 7px 8px;
+        font-size: 0.78rem;
+    }
+
+    .hero {
+        min-height: 65vh;
+        margin-top: 60px;
+        padding: 12px !important;
+    }
+
+    .bg-hero {
+        min-height: 65vh;
+        border-radius: 20px;
+    }
+
+    .apresentacao {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .titulo-apresentacao {
+        font-size: clamp(2rem, 8vw, 3rem);
+        line-height: 1.1;
+    }
+
+    .paragrafo-apresentacao {
+        width: 100%;
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.6;
+        padding: 0;
+    }
+
+    .botoes-apresentacao {
+        margin: 8px;
+        padding: 9px 20px;
+        font-size: 1rem;
+    }
+
+    .carrossel-container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .carrossel-tecnologias { gap: 2.5em; }
+    .carrossel-tecnologias li img { width: 38px; }
+
+    .sessao-sobre { padding: 40px 10px; }
+
+    .sessao-sobre .conteudo-sobre,
+    .sessao-sobre .conteudo-habilidades,
+    .sessao-sobre .conteudo-academico {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .sessao-sobre p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .sessao-experiencia {
+        min-height: auto;
+        padding: 20px 10px;
+    }
+
+    .card-experiencia {
+        width: 100%;
+        max-width: 100%;
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .cabecalho-card { flex-wrap: wrap; }
+
+    .cabecalho-card > p { margin-left: auto; }
+
+    .informacoes-card {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .sessao-projetos { padding: 30px 10px; }
+
+    .cards {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cards > img { height: 190px; }
+
+    .card-body-projeto {
+        height: auto;
+        min-height: 230px;
+        padding: 15px;
+    }
+
+    .lista-linguagem-projeto {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .sessao-github {
+        min-height: auto;
+        padding: 40px 10px;
+    }
+
+    .sessao-github .row {
+        width: 100%;
+        margin: 0;
+    }
+
+    .sessao-github .conteudo-sobre {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .stats-gituhb {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .card-stats { width: 100%; }
+
+    .conteudo-sobre .img-banner-github {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .foto-perfil-stats {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .lista-itens-stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .item-stats {
+        flex: 1 1 calc(33.333% - 10px);
+        min-width: 80px;
+    }
+
+    .body-card {
+        width: 100%;
+        height: 220px;
+    }
+
+    .top-repos-card { width: 100%; }
+    .item-top-repo-nome { max-width: 60%; }
+
+    .certificado {
+        min-height: auto;
+        padding: 40px 10px;
+    }
+
+    .card-certificado { width: 100%; }
+
+    #modal-dragonball-explore,
+    #modal-fundacao-leticia-duarte,
+    #modal-truco,
+    #modal-studio-belle,
+    #modal-weahter,
+    #modal-weather {
+        width: calc(100% - 20px);
+        max-width: none;
+        height: 90vh;
+        max-height: 90vh;
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .modal-imagem-body { height: 250px; }
+
+    .modal-body .btn-glass { margin: 5px; }
+
+    .rodape {
+        margin-top: 50px;
+        padding: 40px 15px;
+    }
+
+    .rodape-descricao { line-height: 1.6; }
+    .rodape-info p { word-break: break-word; }
+}
+
+@media (max-width: 480px) {
+    .header-portifolio { padding: 6px 5px; }
+
+    .navegacao-portifolio {
+        width: 100%;
+    }
+
+    .lista-links { gap: 0; }
+
+    .lista-links li {
+        padding: 6px;
+        font-size: 0.7rem;
+    }
+
+    .hero {
+        padding: 8px !important;
+        margin-top: 55px;
+    }
+
+    .bg-hero {
+        min-height: 60vh;
+        border-radius: 15px;
+    }
+
+    .titulo-apresentacao {
+        font-size: clamp(1.8rem, 9vw, 2.4rem);
+    }
+
+    .paragrafo-apresentacao {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .botoes-apresentacao {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .carrossel-tecnologias { gap: 2em; }
+    .carrossel-tecnologias li img { width: 32px; }
+
+    .sessao-sobre { padding: 30px 8px; }
+
+    .sessao-sobre .conteudo-sobre,
+    .sessao-sobre .conteudo-habilidades,
+    .sessao-sobre .conteudo-academico {
+        padding: 16px;
+    }
+
+    .sessao-sobre p { font-size: 0.82rem; }
+
+    .card-experiencia { padding: 16px; }
+
+    .cabecalho-card > p {
+        width: 100%;
+        margin-left: 0;
+        font-size: 0.8rem;
+    }
+
+    .cards > img { height: 170px; }
+
+    .card-body-projeto {
+        min-height: 210px;
+        padding: 12px;
+    }
+
+    .card-body-projeto p { font-size: 0.8rem; }
+
+    .lista-linguagem-projeto { gap: 10px; }
+
+    .sessao-github .conteudo-sobre { padding: 8px; }
+    .conteudo-sobre .img-banner-github { height: 160px; }
+    .foto-perfil-stats { height: 180px; }
+
+    .item-stats {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .body-card { height: 200px; }
+
+    .item-top-repo-nome {
+        max-width: 55%;
+        font-size: 0.75rem;
+    }
+
+    .certificado { padding: 30px 8px; }
+
+    .card-certificado {
+        padding: 18px;
+    }
+
+    .card-certificado-descricao {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .img-local-certificado { width: 80px; }
+
+    #modal-dragonball-explore,
+    #modal-fundacao-leticia-duarte,
+    #modal-truco,
+    #modal-studio-belle,
+    #modal-weahter,
+    #modal-weather {
+        width: calc(100% - 12px);
+        height: 94vh;
+        max-height: 94vh;
+        padding: 12px;
+    }
+
+    .titulo-modal { font-size: 1rem; }
+
+    .modal-body { font-size: 0.8rem; }
+    .modal-body h3 { font-size: 1rem; }
+    .modal-body h4 { font-size: 0.9rem; }
+    .modal-imagem-body { height: 200px; }
+
+    .modal-body .btn-glass {
+        width: 100%;
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .rodape {
+        padding: 35px 10px;
+        margin-top: 30px;
+    }
+
+    .rodape-redes a {
+        font-size: 1.5rem;
+        margin: 0 7px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .sessao-sobre .conteudo-sobre::before,
+    .sessao-sobre .conteudo-habilidades::before,
+    .sessao-sobre .conteudo-academico::before {
+        width: 150px;
+        height: 150px;
+        filter: blur(45px);
+    }
+}
+
+@media (max-width: 480px) {
+    .sessao-sobre .conteudo-sobre,
+    .sessao-sobre .conteudo-habilidades,
+    .sessao-sobre .conteudo-academico {
+        border-radius: 16px;
+    }
+
+    .sessao-sobre .conteudo-sobre::before,
+    .sessao-sobre .conteudo-habilidades::before,
+    .sessao-sobre .conteudo-academico::before {
+        width: 125px;
+        height: 125px;
+        filter: blur(40px);
+        opacity: 0.65;
+    }
 }
