@@ -1,0 +1,49 @@
+import imagens from './imagens'
+
+export const projetos = [
+  {
+    modal: "modal-fundacao-leticia-duarte",
+    classe: "card-projeto-1",
+    imagem: imagens.img,
+    alt: "",
+    tecnologias: ['html5', 'css3', 'javascript', 'php', 'csharp', 'fomantic'],
+    titulo: "Sistema Leticia Duarte - Web",
+    descricao: "Sistema web criado para apoiar a Fundação Letícia Duarte, oferecendo ferramentas práticas para gestão interna, controle de informações e organização administrativa eficiente.",
+  },
+  {
+    modal: "modal-studio-belle",
+    classe: "card-projeto-3",
+    imagem: imagens.studioBelle,
+    alt: "",
+    tecnologias: ['html5', 'css3', 'javascript', 'php', 'bootstrap'],
+    titulo: "STUDIO BELLE",
+    descricao: "O Studio Belle é um sistema web desenvolvido para a gestão administrativa de um salão de beleza, com foco em organização, praticidade e eficiência.",
+  },
+  {
+    modal: "modal-dragonball-explore",
+    classe: "card-projeto-3",
+    imagem: imagens.backgroundHeroDragonball,
+    alt: "",
+    tecnologias: ['html5', 'css3', 'javascript'],
+    titulo: "DRAGON BALL EXPLORE",
+    descricao: "Aplicação desktop desenvolvida para a Fundação Letícia Duarte, permitindo gerenciamento ágil de dados, com funcionalidades administrativas essenciais e suporte eficiente às operações diárias.",
+  },
+  {
+    modal: "modal-truco",
+    classe: "card-projeto-2",
+    imagem: imagens.placarTruco,
+    alt: "",
+    tecnologias: ['html5', 'css3', 'javascript'],
+    titulo: "Placar de truco para casal",
+    descricao: "Placar digital e moderno para partidas de truco entre casais. O app web oferece um registro fácil e intuitivo dos pontos, com recurso de modais e avisos de vitórias caso um dos jogadores ganhe.",
+  },
+  {
+    modal: "modal-weahter",
+    classe: "card-projeto-2",
+    imagem: imagens.apresentacaoaWeather,
+    alt: "",
+    tecnologias: ['html5', 'css3', 'javascript'],
+    titulo: "WeatherWeb",
+    descricao: "Aplicação web para consulta de informações climáticas em tempo real, com interface moderna e responsiva, permitindo visualizar dados como temperatura, condições do tempo e localização de forma simples e intuitiva.",
+  },
+]
