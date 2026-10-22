@@ -10,4 +10,5 @@ export const tecnologias = {
   java: { legenda: "Java", imagem: imagens.java },
   csharp: { legenda: "C#", imagem: imagens.cSharp },
   fomantic: { legenda: "Fomantic UI", imagem: imagens.fomaticUi },
+  spring_boot: { legenda: "Spring Boot", imagem: imagens.spring_boot },
 }

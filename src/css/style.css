@@ -545,6 +545,28 @@ body.no-scroll {
     overflow-y: scroll;
 }
 
+#modal-controle-financeiro {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    background-color: rgba(31, 31, 31, 0.062);
+    z-index: 3000;
+    width: 1000px;
+    height: 700px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    overflow-y: scroll;
+}
+
+#modal-controle-financeiro::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
 #modal-fundacao-leticia-duarte {
     position: fixed;
     left: 50%;
@@ -614,7 +636,7 @@ body.no-scroll {
     overflow-y: scroll;
 }
 
-#modal-weather::-webkit-scrollbar {
+#modal-weahter::-webkit-scrollbar {
     width: 0;
     height: 0;
 }
@@ -1335,11 +1357,6 @@ body.no-scroll {
     }
 }
 
-/* =========================================================
-   RESPONSIVIDADE EXTRA
-   Mantém o design original e adapta somente os tamanhos
-   ========================================================= */
-
 @media (max-width: 992px) {
     .header-portifolio { padding: 12px 15px; }
     .lista-links { gap: 10px; }
@@ -1354,7 +1371,8 @@ body.no-scroll {
     #modal-fundacao-leticia-duarte,
     #modal-truco,
     #modal-studio-belle,
-    #modal-weahter {
+    #modal-weahter,
+    #modal-controle-financeiro {
         width: 90%;
         max-width: 900px;
         height: 85vh;
@@ -1548,7 +1566,8 @@ body.no-scroll {
     #modal-truco,
     #modal-studio-belle,
     #modal-weahter,
-    #modal-weather {
+    #modal-weather,
+    #modal-controle-financeiro {
         width: calc(100% - 20px);
         max-width: none;
         height: 90vh;
@@ -1675,7 +1694,8 @@ body.no-scroll {
     #modal-truco,
     #modal-studio-belle,
     #modal-weahter,
-    #modal-weather {
+    #modal-weather,
+    #modal-controle-financeiro {
         width: calc(100% - 12px);
         height: 94vh;
         max-height: 94vh;

@@ -10,6 +10,7 @@ import Certificados from './components/Certificados'
 import Rodape from './components/Rodape'
 import ModalDragonBall from './components/modais/ModalDragonBall'
 import ModalLeticiaDuarte from './components/modais/ModalLeticiaDuarte'
+import ModalControleFinanceiro from './components/modais/ModalControleFinanceiro'
 import ModalTruco from './components/modais/ModalTruco'
 import ModalStudioBelle from './components/modais/ModalStudioBelle'
 import ModalWeather from './components/modais/ModalWeather'
@@ -40,6 +41,7 @@ function App() {
 
       <ModalDragonBall aberto={modalAberto === 'modal-dragonball-explore'} onFechar={fecharModal} />
       <ModalLeticiaDuarte aberto={modalAberto === 'modal-fundacao-leticia-duarte'} onFechar={fecharModal} />
+      <ModalControleFinanceiro aberto={modalAberto === 'modal-controle-financeiro'} onFechar={fecharModal} />
       <ModalTruco aberto={modalAberto === 'modal-truco'} onFechar={fecharModal} />
       <ModalStudioBelle aberto={modalAberto === 'modal-studio-belle'} onFechar={fecharModal} />
       <ModalWeather aberto={modalAberto === 'modal-weahter'} onFechar={fecharModal} />

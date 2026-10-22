@@ -11,6 +11,15 @@ export const projetos = [
     descricao: "Sistema web criado para apoiar a Fundação Letícia Duarte, oferecendo ferramentas práticas para gestão interna, controle de informações e organização administrativa eficiente.",
   },
   {
+    modal: "modal-controle-financeiro",
+    classe: "card-projeto-2",
+    imagem: imagens.controleFinanceiro,
+    alt: "Tela do sistema de controle financeiro",
+   tecnologias: ['html5', 'css3', 'javascript', 'java', 'spring_boot'],
+    titulo: "Controle Financeiro",
+    descricao: "Sistema para registrar receitas e despesas, categorizar gastos e acompanhar o saldo de forma simples e organizada.",
+  },
+  {
     modal: "modal-studio-belle",
     classe: "card-projeto-3",
     imagem: imagens.studioBelle,
